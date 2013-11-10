@@ -1,31 +1,23 @@
 {
 	"name": "a_quick_into_to_backbone",
 	"title": "A Quick Into To Backbone",
-	"description": "A brief description of what will be covered in the tutorial",
+	"description": "A brief introduction on the structure of the Backbone MVC",
 	"version": "0.0.0",
 	"github_path": "sdemjanenko/a_quick_into_to_backbone",
-	"difficulty": 1,
+	"difficulty": 3,
 	"topics": [
-  "JavaScript"
+  "JavaScript",
+  "Backbone",
+  "MVC"
 ],
 	"questions": [
   {
-    "question": "how long should it take someone to read your tutorial?",
-    "options": [
-      "15 minutes",
-      "1 hour",
-      "30 minutes",
-      "2 hours"
-    ],
-    "answer": "15 minutes"
+    "question": "In Backbone, where does data get stored?",
+    "answer": "model"
   },
   {
-    "question": "an advanced tutorial should have a difficulty of 1",
-    "answer": false
-  },
-  {
-    "question": "this command line tool can be used to create tutorials",
-    "answer": "tut"
+    "question": "In Backbone, how does one pull down data from the server?",
+    "answer": "fetch"
   }
 ]
 }
