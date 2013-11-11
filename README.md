@@ -20,7 +20,7 @@ In Backbone, models store data and worry about communicating with the server.
       }
     });
 
-    var user = new User({name: Stephen, email: 'stephen@somecompany.com'});
+    var user = new User({name: 'Stephen', email: 'stephen@somecompany.com'});
 
 
 Views
