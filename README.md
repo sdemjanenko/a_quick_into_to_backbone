@@ -22,6 +22,9 @@ In Backbone, models store data and worry about communicating with the server.
 
     var user = new User({name: 'Stephen', email: 'stephen@somecompany.com'});
 
+In the above example the isMale function is a helper method which I will use in a View later.
+
+
 Sync
 ----
 
@@ -68,3 +71,13 @@ Backbone views manage rendering UI elements as well as handling user interaction
     });
 
     var userProfile = new UserView({el: "#userProfile", model: user });
+
+
+Summary
+=======
+
+Backbone is a great way to give structures to your applications.  Data goes in Models.
+User interactions & rendering logic goes in the Views.
+
+When interacting with a server your Models serve as the data cache from which your views read.
+You can then let Backbone.Sync talk to your server when prompted by .fetch() or .save()
