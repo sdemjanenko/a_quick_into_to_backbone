@@ -2,7 +2,7 @@
 	"name": "a_quick_into_to_backbone",
 	"title": "A Quick Into To Backbone",
 	"description": "A brief introduction on the structure of the Backbone MVC",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"github_path": "sdemjanenko/a_quick_into_to_backbone",
 	"difficulty": 3,
 	"topics": [
@@ -10,14 +10,14 @@
   "Backbone",
   "MVC"
 ],
-	"questions": [
-  {
-    "question": "In Backbone, where does data get stored?",
-    "answer": "model"
-  },
-  {
-    "question": "In Backbone, how does one pull down data from the server?",
-    "answer": "fetch"
-  }
-]
+	"questions": [{
+      "question": "In Backbone, where should your view get its data from?",
+      "answer": "model"
+    },{
+      "question": "In Backbone, how does one get data from the server?",
+      "answer": "fetch"
+    },{
+      "question": "In Backbone, how does one send new or updated data to the server?",
+      "answer": "save"
+  }]
 }

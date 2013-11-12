@@ -22,6 +22,22 @@ In Backbone, models store data and worry about communicating with the server.
 
     var user = new User({name: 'Stephen', email: 'stephen@somecompany.com'});
 
+Sync
+----
+
+Backbone.sync lets your models talk to your server. Sync by default is set up to talk
+with a RESTful API. If you would like more control over your API, you can override sync.
+
+When working with a model you can use the .fetch() and .save() methods. These methods delegate
+out to Backbone.Sync.
+
+    var my_user = new User({url: '/my_user'});
+    my_user.fetch(); // makes a GET request with type application/json
+
+
+    var new_user = new User({url: '/users', name: 'Ben', email: 'ben@somecompany.com', sex: 'male'});
+    new_user.save(); // makes a POST request
+
 
 Views
 =====
@@ -30,6 +46,9 @@ Backbone views manage rendering UI elements as well as handling user interaction
 
 
     var UserView = Backbone.View.extend({
+      events: {
+        "click span.name": "nameClicked"
+      },
       initialize: function() {
         this.$el.html("<span class='name'></span> (<span class='email'></span>)");
         this.renderName().renderEmail();
@@ -42,6 +61,9 @@ Backbone views manage rendering UI elements as well as handling user interaction
       renderEmail: function() {
         this.$('.email').text(this.model.get('email'));
         return this;
+      },
+      nameClicked: function() {
+        alert("Hello, " + this.model.get('name'));
       }
     });
 
